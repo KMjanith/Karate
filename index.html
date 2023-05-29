@@ -18,8 +18,7 @@
             .top-nav-right{
                 float: right;
                 color: white;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+                margin: 0;
             }
         </style>
 </head>
@@ -37,12 +36,10 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color:white" href="Classes.html"><strong>Classes</strong></a>
-                    </li>
-                    
+                    </li>    
                 </ul>
             </div>
             <div class="top-nav-right " id="date">
-                
             </div>
         </div>
     </nav>
@@ -73,14 +70,14 @@
 
     <script>
         function updateDate() {
-                var currentDate = new Date();
-                var options = { year: 'numeric', month: 'long', day: 'numeric' };
-                var formattedDate = currentDate.toLocaleDateString(undefined, options);
-                document.getElementById("date").textContent = formattedDate;
-            }
+  var currentDate = new Date();
+  var options = { year: 'numeric', month: 'long', day: 'numeric' };
+  var formattedDate = currentDate.toLocaleDateString(undefined, options);
+  document.getElementById("date").textContent = formattedDate;
+}
 
-            // Call updateDate function on page load
-            window.onload = updateDate;
+// Call updateDate function on page load
+window.onload = updateDate;
     </script>
 </body>
 
