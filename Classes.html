@@ -32,29 +32,39 @@
                     </li>
                 </ul>
             </div>
+            <div class="top-nav-right " id="date">
+            </div>
         </div>
     </nav>
 
     <div class="container-sm mt-3">
         <div class="d-flex flex-row p-3 mx-5 ">
-            <h1 class="text-center text-light ">my Classes</h1>
+            <h1 class="text-center text-light">my Classes</h1>
         </div>
         <div class="d-flex flex-row p-3 mx-5 ">
-            <a class="btn btn-secondary btn-block "
+            <a class="btn btn-success btn-block "
                 style="height:50px; display:flex; justify-content:center; font-size:25px"
                 href="https://docs.google.com/spreadsheets/d/1AeNhRdWDhIgZWV9bvQxopT9hd36ODrNSYu8hBq4Mtl4/edit#gid=0"
                 role="button"><strong>Home Class</strong></a>
         </div>
         <div class="d-flex flex-row p-3 mx-5 ">
-            <a class="btn btn-info btn-bg btn-block "
+            <a class="btn btn-primary btn-bg btn-block "
                 style="height:50px; display:flex; justify-content:center; font-size:25px"
                 href="https://docs.google.com/spreadsheets/d/1AeNhRdWDhIgZWV9bvQxopT9hd36ODrNSYu8hBq4Mtl4/edit#gid=1564405393"
-                role="button"><strong>Mount Mary class</strong></a>
+                role="button"><strong>Mount Mary</strong></a>
         </div>
     </div>
 
     <script>
+        function updateDate() {
+            var currentDate = new Date();
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = currentDate.toLocaleDateString(undefined, options);
+            document.getElementById("date").textContent = formattedDate;
+        }
 
+        // Call updateDate function on page load
+        window.onload = updateDate;
     </script>
 </body>
 

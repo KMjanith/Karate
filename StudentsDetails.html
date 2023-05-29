@@ -32,6 +32,8 @@
                     </li>
                 </ul>
             </div>
+            <div class="top-nav-right " id="date">
+            </div>
         </div>
     </nav>
 
@@ -124,6 +126,17 @@
                     - Grade 14</strong></a>
         </div>
     </div>
+    <script>
+        function updateDate() {
+            var currentDate = new Date();
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = currentDate.toLocaleDateString(undefined, options);
+            document.getElementById("date").textContent = formattedDate;
+        }
+
+        // Call updateDate function on page load
+        window.onload = updateDate;
+    </script>
 </body>
 
 </html>
