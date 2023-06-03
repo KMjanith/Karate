@@ -16,6 +16,31 @@
         #table-11{
             display: none;
         }
+        #table-12{
+            display: none;
+        }
+        #table-13{
+            display: none;
+        }
+        #table-11-katha{
+            display: none;
+        }
+        #table-11-kumithe{
+            display: none;
+        }
+        #table-12-katha{
+            display: none;
+        }
+        #table-12-kumithe{
+            display: none;
+        }
+        #table-13-katha{
+            display: none;
+        }
+        #table-13-kumithe{
+            display: none;
+        }
+        
        </style>
 
         <style>
@@ -54,48 +79,88 @@
                 <h1 class="text-center text-light">junior school meet</h1>
             </div>
             <div class="d-flex flex-row p-3 mx-5 " id="under11button">
-                <a class="btn btn-success btn-block "
-                    style="height:50px; display:flex; justify-content:center; font-size:25px"
-                    href="#"
-                    role="button"><strong>under 11</strong></a>
-
+                <button class="btn btn-success btn-block" 
+                style="height:50px; display:flex; justify-content:center; font-size:25px">
+                <strong>under 11</strong></button>>
             </div>
-           
-            <div class="container mt-3" id="table-11">
-                <table class="table table-striped table-light" >
-                    <thead>
+            <div class="container mt-2" id="table-11">
+                <div class="d-flex flex-row p-3 mx-5 " id="under11button">
+                    <button class="btn btn-primary btn-block" style="height:50px; display:flex; justify-content:center; font-size:25px">
+                        <strong>කාතා</strong></button>>
+                </div>
+                <div class="d-flex flex-row p-3 mx-5 " id="under11button">
+                    <button class="btn btn-danger btn-block" style="height:50px; display:flex; justify-content:center; font-size:25px">
+                        <strong>කුමිතේ</strong></button>>
+                </div>
+            </div>
+            
+
+
+            <div class="conatiner mt-2" id="table-11-katha">
+                <table class="table" >
+                    <thead class="table-light ">
                         <tr>
-                            <th>name</th>
-                            <th>age</th>
-                            <th>mail</th>
+                            <th>නම</th>
+                            <th>උපන් දිනය</th>
+                            <th>උ. සහතික අංකය</th>
+                            <th>ඇතු. අංකය</th>
+                            <th>වසර</th>
+
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-light">
                         <tr>
-                            <td>janith</td>
-                            <td>24</td>
-                            <td>jankdkfsdahfkjithzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
                         </tr>
                         <tr>
-                            <td>malsha</td>
-                            <td>24</td>
-                            <td>hjsdafgkaj</td>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+       
             
          
-            <div class="d-flex flex-row p-3 mx-5 ">
-                <a class="btn btn-primary btn-bg btn-block "
-                    style="height:50px; display:flex; justify-content:center; font-size:25px"
-                    href="#"
-                    role="button"><strong>under 12</strong></a>
+            <div class="d-flex flex-row p-3 mx-5 " id="under12button">
+                <button class="btn btn-success btn-block" style="height:50px; display:flex; justify-content:center; font-size:25px">
+                    <strong>under 12</strong></button>>
             </div>
-            <div class="d-flex flex-row p-3 mx-5 ">
-                <a class="btn btn-primary btn-bg btn-block "
-                    style="height:50px; display:flex; justify-content:center; font-size:25px" 
-                    href="#" role="button"><strong>under 13</strong></a>
+            <div class="container mt-2" id="table-12">
+                <div class="d-flex flex-row p-3 mx-5 " id="under11button">
+                    <button class="btn btn-primary btn-block"
+                        style="height:50px; display:flex; justify-content:center; font-size:25px">
+                        <strong>කාතා</strong></button>>
+                </div>
+                <div class="d-flex flex-row p-3 mx-5 " id="under11button">
+                    <button class="btn btn-danger btn-block"
+                        style="height:50px; display:flex; justify-content:center; font-size:25px">
+                        <strong>කුමිතේ</strong></button>>
+                </div>
+            </div>
+            <div class="d-flex flex-row p-3 mx-5 " id="under13button">
+                <button class="btn btn-success btn-block" style="height:50px; display:flex; justify-content:center; font-size:25px">
+                    <strong>under 13</strong></button>>
+            </div>
+            <div class="container mt-2" id="table-13">
+                <div class="d-flex flex-row p-3 mx-5 " id="under11button">
+                    <button class="btn btn-primary btn-block"
+                        style="height:50px; display:flex; justify-content:center; font-size:25px">
+                        <strong>කාතා</strong></button>>
+                </div>
+                <div class="d-flex flex-row p-3 mx-5 " id="under11button">
+                    <button class="btn btn-danger btn-block"
+                        style="height:50px; display:flex; justify-content:center; font-size:25px">
+                        <strong>කුමිතේ</strong></button>>
+                </div>
             </div>
         </div>
     
@@ -111,15 +176,44 @@
             window.onload = updateDate;
 
             var under11button = document.getElementById("under11button");
+            var under12button = document.getElementById("under12button");
+            var under13button = document.getElementById("under13button");
             var table_11 = document.getElementById('table-11');
+            var table_12 = document.getElementById('table-12');
+            var table_13 = document.getElementById('table-13');
 
             under11button.addEventListener('click', function(){
                 if(table_11.style.display === 'none'){
                     table_11.style.display = 'block'
                 }else{
                     table_11.style.display = 'none'
+                }  
+            });
+            under12button.addEventListener('click', function () {
+                if (table_12.style.display === 'none') {
+                    table_12.style.display = 'block'
+                } else {
+                    table_12.style.display = 'none'
                 }
             });
+            under13button.addEventListener('click', function () {
+                if (table_13.style.display === 'none') {
+                    table_13.style.display = 'block'
+                } else {
+                    table_13.style.display = 'none'
+                }
+            });
+
+            function table_11_katha_kumithe(){
+                var table_11_katha = document.getElementById('table-11-katha').style.display
+                var table_11_kumithe = document.getElementById('table-11-katha').style.display
+                if(table_11_katha === 'none'){
+                    table_11_katha = 'block'
+                }
+            } 
+
+        
+                
 
 
         </script>
