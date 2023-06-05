@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Table Example</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <button onclick="toggleTable()">Toggle Table</button>
+    <table id="dataTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+    <script>
+        // Sample data as an object list
+            var data = [
+                { id: 1, name: "John Doe", age: 25 },
+                { id: 2, name: "Jane Smith", age: 32 },
+                { id: 3, name: "Bob Johnson", age: 41 }
+            ];
+
+            var tableVisible = false;
+
+            // Function to toggle the visibility of the table
+            function toggleTable() {
+                var dataTable = document.getElementById("dataTable");
+
+                // Toggle visibility based on current state
+                if (tableVisible) {
+                    dataTable.style.display = "none";
+                } else {
+                    dataTable.style.display = "table";
+                    displayTable();
+                }
+
+                tableVisible = !tableVisible;
+            }
+
+            // Function to display the data as a table
+            function displayTable() {
+                var tableBody = document.getElementById("tableBody");
+
+                // Clear existing table rows
+                tableBody.innerHTML = "";
+
+                // Loop through the data and generate table rows
+                for (var i = 0; i < data.length; i++) {
+                    var row = document.createElement("tr");
+
+                    var idCell = document.createElement("td");
+                    idCell.textContent = data[i].id;
+                    row.appendChild(idCell);
+
+                    var nameCell = document.createElement("td");
+                    nameCell.textContent = data[i].name;
+                    row.appendChild(nameCell);
+
+                    var ageCell = document.createElement("td");
+                    ageCell.textContent = data[i].age;
+                    row.appendChild(ageCell);
+
+                    tableBody.appendChild(row);
+                }
+            }
+
+    </script>
+</body>
+
+</html>
