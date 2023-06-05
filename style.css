@@ -10,7 +10,52 @@
     }
 }
 
+.top-nav-right {
+    float: right;
+    color: white;
+    margin: 0;
+}
+
+h5 {
+    color: white;
+}
 
 body{
     background-color: black;
 }
+
+ #table-11 {
+     display: none;
+ }
+
+ #table-12 {
+     display: none;
+ }
+
+ #table-13 {
+     display: none;
+ }
+
+ #table-11-katha {
+     display: none;
+ }
+
+ #table-11-kumithe {
+     display: none;
+ }
+
+ #table-12-katha {
+     display: none;
+ }
+
+ #table-12-kumithe {
+     display: none;
+ }
+
+ #table-13-katha {
+     display: none;
+ }
+
+ #table-13-kumithe {
+     display: none;
+ }
