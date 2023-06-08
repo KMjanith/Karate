@@ -8,44 +8,83 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        #form-body{
-            font-size: 28px;
-            background-color: rgb(23, 7, 82);
-            color: aliceblue;
+        #form {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 6px;
         }
+    
+        #full_name, #index_no, #class, #birth_day {
+            border-radius: 6px;
+            border-style: solid;
+            border-color: white;
+            display: inline-block;
+        }
+     
     </style>
+    
 </head>
 
-<body>
-    <div class="container mt-3 p-3" id="form-body" style="font-family:Arial, Helvetica, sans-serif">
-        <form id="myForm">
-            <label >full name</label>
-            <br />
-            <input name="full_name" id="full_name"  style="border-radius: 10px;">
-            <br />
-            <label>email</label>
-            <br />
-            <input name="email" id="email"  style="border-radius: 10px;">
-            <br />
-            <label>age</label>
-            <br />
-            <input name="age" id="age"  style="border-radius: 10px;"> 
-            <br />
-            <label>message</label>
-            <br />
-            <input name="message" id="message"  style="border-radius: 10px;"> 
-            <br />
-            <button onclick="SubForm()" class="btn btn-danger">Submit</button>
-        </form>
+<body >
+    <nav class="navbar navbar-expand-sm navbar-dark border-bottom" style="background-color: darkblue;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" style="color:white" href="index.html"><strong>Home</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="StudentsDetails.html"><strong>Students
+                                Details</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="Classes.html"><strong>Classes</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="Read_data.html"><strong>read data</strong></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-nav-right " id="date">
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h3 class="text-dark">Student's Details</h3>
     </div>
-    
-    
+    <div class="container mt-4 p-3 bg-info text-white" id="form">
+        <form id="myForm">
+            <div class="row-sm border-bottom p-2">
+                <div class="col-3-sm"><label>Full Name</label></div>
+                <div class="d-inline-block"><input name="full_name" id="full_name"></div>
+            </div>
+            <div class="row-sm border-bottom p-2">
+                <div class="col-3-sm"><label>Birth Day</label></div>
+                <div class="d-inline-block"><input type="date" name="birth_day" id="birth_day"></div>
+            </div>
+            <div class="row-sm border-bottom p-2">
+                <div class="col-3-sm"><label>Index no</label></div>
+                <div class="d-inline-block"><input name="index_no" id="index_no"></div>
+            </div>
+            <div class="row-sm border-bottom p-2">
+                <div class="col-3-sm"><label>Class</label></div>
+                <div class="d-inline-block"><input name="class" id="class"></div>
+            </div>
+            
+        </form>
+        <div class="row p-2">
+        <button class="btn btn-success " onclick="SubForm()"><strong>Submit</strong></button>
+        </div>
+    </div>
 
-        
+    
     
     <script>
         function SubForm() {
-            
+
             $.ajax({
                 url: "https://api.apispreadsheets.com/data/H9t1VEnZl5UH2nSh/",
                 //url: "https://api.apispreadsheets.com/data/7bRd21wPShghNihl/",
@@ -53,15 +92,17 @@
                 data: $("#myForm").serializeArray(),
                 success: function () {
                     alert("Form Data Submitted :)")
+                   
                 },
                 error: function () {
-                    alert("There was an error :(")
+                    alert("There was an error :(");
                 }
             });
+            
             document.getElementById("full_name").value = " ";
-            document.getElementById("email").value = " ";
-            document.getElementById("age").value = " ";
-            document.getElementById("message").value = " ";
+            document.getElementById("birth_day").value = " ";
+            document.getElementById("index_no").value = " ";
+            document.getElementById("class").value = " ";
         }
     </script>
 </body>
