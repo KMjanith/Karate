@@ -18,7 +18,7 @@
         }
     </style>
 </head>
-<body style="background-color: rgb(34, 233, 166);">
+<body style="background-color: black;">
     <nav class="navbar navbar-expand-sm navbar-dark border-bottom" style="background-color: darkblue;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -50,7 +50,9 @@
         </div>
     </nav>
     <div class="container mt-5" id="main">
-            <h1>Find Students</h1>
+        <div class="d-flex flex-row p-3 mx-5 ">
+            <h1 class="text-center text-light ">Find Students</h1>
+        </div>
             <h3 id="h2" style="color: crimson;"></h3>
             <input type="text" id="year" placeholder="enter birth year">
             <button id="submit" onclick="selector()" class="btn btn-primary">submit</button>
