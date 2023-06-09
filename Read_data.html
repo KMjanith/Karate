@@ -11,16 +11,16 @@
 <body>
     <div class="container mt-5" id="main">
         <h2 id="h2"></h2>
-        <label>age</label>
-        <input type="text" id="age">
+        <label>Birth year</label>
+        <input type="text" id="year">
         <button id="submit" onclick="selector()">submit</button>
     <br>
         <table class="table table-striped">
             <thead>
                 <th>full_name</th>
-                <th>email</th>
-                <th>Age</th>
                 <th>birth_day</th>
+                <th>index_no</th>
+                <th>class</th>
             </thead>
             <tbody id="tbody">
             </tbody>
@@ -40,25 +40,24 @@
             h2.innerHTML = '';
             var table_body = document.getElementById("tbody");
             table_body.innerHTML = '';
-            let age = document.getElementById("age").value;
+            let age = document.getElementById("year").value;
 
             fetch(url).then(result => result.text()).then(function (csvtext) {
                 return csv().fromString(csvtext);
             }).then(function (csv) {
                 //main.innerHTML = "<code>" + JSON.stringify(csv) + "</code>";
                 let number = 0;
+                console.log(age);
                 csv.forEach(function (row) {
-                    if (row.age === age) {
+                    if (row.birth_day.substring(0,4) === age) {
                         number = number + 1;
-                        table_body.innerHTML += "<tr>" + "<td> " + row.full_name + "</td >" + "<td>" + row.email + "</td>" +
-                            "<td>" + row.age + "</td>" + "<td>" + row.birth_day + "</td>" + "</tr>"
+                        table_body.innerHTML += "<tr>" + "<td> " + row.full_name + "</td >" + "<td>" + row.birth_day + "</td>" +
+                            "<td>" + row.index_no + "</td>" + "<td>" + row.birth_day + "</td>" + "</tr>"
                     }
-                    
-
 
                 })
                 h2.innerHTML = "number of elements: " + number;
-                document.getElementById("age").value = "";
+                document.getElementById("year").value = "";
             })
         }
         

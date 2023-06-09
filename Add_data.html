@@ -19,6 +19,7 @@
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
             border-radius: 6px;
+            color: rgb(21, 21, 92);
         }
     
         #full_name, #index_no, #class, #birth_day {
@@ -41,6 +42,9 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <a class="nav-link" style="color:white" href="index.html"><strong>Home</strong></a>
+                    </li>
+                    <li class="nav-item">
                     <a class="nav-link" style="color:white" href="StudentsDetails.html"><strong>Students
                                 Details</strong></a>
                     </li>
@@ -50,9 +54,7 @@
                     <li class="nav-item">
                         <a class="nav-link" style="color:white" href="tournement.html"><strong>Tournaments</strong></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color:white" href="Add_data.html"><strong>add data</strong></a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" style="color:white" href="Read_data.html"><strong>read data</strong></a>
                     </li>
@@ -65,7 +67,7 @@
     <div class="container mt-3">
         <h3 class="text-dark">Student's Details</h3>
     </div>
-    <div class="container mt-4 p-3 bg-info text-white" id="form">
+    <div class="container mt-4 p-3 bg-info " id="form" >
         <form id="myForm">
             <div class="row-sm border-bottom p-2">
                 <div class="col-3-sm"><label>Full Name</label></div>
@@ -86,8 +88,12 @@
             
         </form>
         
-        <button class="btn btn-success " onclick="SubForm()"><strong>Submit</strong></button>
-    
+        
+        <div class="row p-2">
+            <button class="btn btn-success " onclick="SubForm()"><strong>Submit</strong></button>
+        </div>
+
+
     </div>
 
    
