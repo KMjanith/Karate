@@ -50,14 +50,14 @@
         </div>
     </nav>
     <div class="container mt-5" id="main">
-            <h2 id="h2"></h2>
+            <h2 id="h2" style="color: crimson;"></h2>
             <h3>Birth year</h3>
             <input type="text" id="year" placeholder="birth day">
             <button id="submit" onclick="selector()" class="btn btn-primary">submit</button>
         </div>
    
         <div class="container mt-2">
-            <table class="table table-striped table-warning">
+            <table class="table table-striped table-bordered table-warning">
                 <thead>
                     <th>full_name</th>
                     <th>birth_day</th>
@@ -95,7 +95,7 @@
                 csv.forEach(function (row) {
                     if (row.birth_day.substring(0,4) === age) {
                         number = number + 1;
-                        table_body.innerHTML += "<tr>" + "<td> " + row.full_name + "</td >" + "<td>" + row.birth_day + "</td>" +
+                        table_body.innerHTML += "<tr>" + "<td> " + number + '.' + row.full_name + "</td >" + "<td>" + row.birth_day + "</td>" +
                             "<td>" + row.index_no + "</td>" + "<td>" + row.class + "</td>" + "</tr>"
                     }
 
