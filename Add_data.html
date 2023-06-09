@@ -28,7 +28,12 @@
             border-color: white;
             display: inline-block;
         }
-     
+        #form-row{
+            border-style:solid;
+            border-color:white;
+            border-radius: 10px;
+            border-width: 1px;
+        }
     </style>
     
 </head>
@@ -67,9 +72,9 @@
     
     <div class="container" id="form" >
         <div class="d-flex flex-row p-3 mx-5 ">
-            <h1 class="text-center text-light ">Add Students</h1>
+            <h1 class="text-center text-light "><strong>Add Students</strong></h1>
         </div>
-        <div class="row  p-3 bg-info ">
+        <div class="row  p-3  text-light" id="form-row">
             <form id="myForm">
                 <div class="row-sm border-bottom p-2">
                     <div class="col-3-sm"><label>Full Name</label></div>
@@ -87,15 +92,16 @@
                     <div class="col-3-sm"><label>Class</label></div>
                     <div class="d-inline-block"><input name="class" id="class"></div>
                 </div>
-            
+                
             </form>
+            <div class="row p-2">
+                <button class="btn btn-success " onclick="SubForm()"><strong>Submit</strong></button>
+            </div>
         </div>
         
         
         
-        <div class="row p-2">
-            <button class="btn btn-success " onclick="SubForm()"><strong>Submit</strong></button>
-        </div>
+        
 
 
     </div>
