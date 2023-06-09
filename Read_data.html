@@ -50,9 +50,9 @@
         </div>
     </nav>
     <div class="container mt-5" id="main">
-            <h2 id="h2" style="color: crimson;"></h2>
-            <h3>Birth year</h3>
-            <input type="text" id="year" placeholder="birth day">
+            <h1>Find Students</h1>
+            <h3 id="h2" style="color: crimson;"></h3>
+            <input type="text" id="year" placeholder="enter birth year">
             <button id="submit" onclick="selector()" class="btn btn-primary">submit</button>
         </div>
    
@@ -100,7 +100,7 @@
                     }
 
                 })
-                h2.innerHTML = "number of elements: " + number;
+                h2.innerHTML = number + ' students have';
                 document.getElementById("year").value = "";
             })
         }
