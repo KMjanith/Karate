@@ -22,7 +22,7 @@
             color: rgb(21, 21, 92);
         }
     
-        #full_name, #index_no, #class, #birth_day {
+        #full_name, #index_no, #phone_no, #birth_day , #guardian_name, #photo, #Address{
             border-radius: 6px;
             border-style: solid;
             border-color: white;
@@ -32,6 +32,13 @@
             border-style:solid;
             border-color:white;
             border-radius: 10px;
+            border-width: 1px;
+        }
+
+        input{
+            background-color: black;
+            border-style: solid;
+            border-color: white;
             border-width: 1px;
         }
     </style>
@@ -90,7 +97,19 @@
                 </div>
                 <div class="row-sm border-bottom p-2">
                     <div class="col-3-sm"><label>Phone.no</label></div>
-                    <div class="d-inline-block"><input name="class" id="class"></div>
+                    <div class="d-inline-block"><input name="phone_no" id="phone_no"></div>
+                </div>
+                <div class="row-sm border-bottom p-2">
+                    <div class="col-3-sm"><label>Address</label></div>
+                    <div class="d-inline-block"><input name="Address" id="Address"></div>
+                </div>
+                <div class="row-sm border-bottom p-2">
+                    <div class="col-3-sm"><label>guardians_name</label></div>
+                    <div class="d-inline-block"><input name="guardian's_name" id="guardian_name" ></div>
+                </div>
+                <div class="row-sm border-bottom p-2">
+                    <div class="col-3-sm"><label>Photo</label></div>
+                    <div class="d-inline-block"><input name="photo" id="photo" type="file"  accept=".jpg" ></div>
                 </div>
                 
             </form>
@@ -120,7 +139,12 @@
             document.getElementById("full_name").value = " ";
             document.getElementById("birth_day").value = " ";
             document.getElementById("index_no").value = " ";
-            document.getElementById("class").value = " ";
+            document.getElementById("phone_no").value = " ";
+            document.getElementById("Address").value = " ";
+            document.getElementById("guardian's_name").value = " ";
+            document.getElementById("photo").value = " ";
+            
+
         }
 
         function updateDate() {
